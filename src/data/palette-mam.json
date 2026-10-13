@@ -1,0 +1,266 @@
+[
+ {
+  "code": "M01",
+  "name": "Black",
+  "hex": "#262223",
+  "display": "#2A2526"
+ },
+ {
+  "code": "M02",
+  "name": "Charcoal",
+  "hex": "#353638",
+  "display": "#3B3B3B"
+ },
+ {
+  "code": "M03",
+  "name": "Dark Grey",
+  "hex": "#545655",
+  "display": "#5C5E5D"
+ },
+ {
+  "code": "M04",
+  "name": "Grey",
+  "hex": "#89898B",
+  "display": "#989695"
+ },
+ {
+  "code": "M05",
+  "name": "Cream",
+  "hex": "#DDD5BE",
+  "display": "#F1EACC"
+ },
+ {
+  "code": "M06",
+  "name": "Olive",
+  "hex": "#75754F",
+  "display": "#818055"
+ },
+ {
+  "code": "M07",
+  "name": "Khaki",
+  "hex": "#756645",
+  "display": "#817048"
+ },
+ {
+  "code": "M08",
+  "name": "Sand",
+  "hex": "#CEB676",
+  "display": "#E4C87D"
+ },
+ {
+  "code": "M09",
+  "name": "Navy",
+  "hex": "#21233C",
+  "display": "#232642"
+ },
+ {
+  "code": "M10",
+  "name": "Royal Blue",
+  "hex": "#003DA8",
+  "display": "#0143B2"
+ },
+ {
+  "code": "M11",
+  "name": "Blue",
+  "hex": "#0269C5",
+  "display": "#0273D1"
+ },
+ {
+  "code": "M12",
+  "name": "Sky Blue",
+  "hex": "#3598C1",
+  "display": "#3AA7CD"
+ },
+ {
+  "code": "M13",
+  "name": "Steel Blue",
+  "hex": "#4F7DB8",
+  "display": "#5789C3"
+ },
+ {
+  "code": "M14",
+  "name": "Light Blue",
+  "hex": "#85A7D4",
+  "display": "#93B7E2"
+ },
+ {
+  "code": "M15",
+  "name": "Pale Blue",
+  "hex": "#B7CEC6",
+  "display": "#C8E2D9"
+ },
+ {
+  "code": "M16",
+  "name": "Slate",
+  "hex": "#607185",
+  "display": "#697C8D"
+ },
+ {
+  "code": "M17",
+  "name": "Sage",
+  "hex": "#5C7162",
+  "display": "#657C67"
+ },
+ {
+  "code": "M18",
+  "name": "Orange",
+  "hex": "#DD7222",
+  "display": "#F47D23"
+ },
+ {
+  "code": "M19",
+  "name": "Amber",
+  "hex": "#E09F21",
+  "display": "#F8AF22"
+ },
+ {
+  "code": "M20",
+  "name": "Yellow",
+  "hex": "#EBC728",
+  "display": "#FFDB2A"
+ },
+ {
+  "code": "M21",
+  "name": "Light Yellow",
+  "hex": "#E8DB68",
+  "display": "#FFF16E"
+ },
+ {
+  "code": "M22",
+  "name": "Lime",
+  "hex": "#CDDE7E",
+  "display": "#E3F485"
+ },
+ {
+  "code": "M23",
+  "name": "Green",
+  "hex": "#88A71D",
+  "display": "#96B71E"
+ },
+ {
+  "code": "M24",
+  "name": "Grass Green",
+  "hex": "#478F46",
+  "display": "#4E9D4A"
+ },
+ {
+  "code": "M25",
+  "name": "Forest",
+  "hex": "#3D6C40",
+  "display": "#437643"
+ },
+ {
+  "code": "M26",
+  "name": "Dark Green",
+  "hex": "#34443A",
+  "display": "#394A3D"
+ },
+ {
+  "code": "M27",
+  "name": "Red",
+  "hex": "#B52B28",
+  "display": "#C92D27"
+ },
+ {
+  "code": "M28",
+  "name": "Pink",
+  "hex": "#D66366",
+  "display": "#EA6D6A"
+ },
+ {
+  "code": "M29",
+  "name": "Orchid",
+  "hex": "#B6618B",
+  "display": "#C66F8B"
+ },
+ {
+  "code": "M30",
+  "name": "Light Pink",
+  "hex": "#D7A6C3",
+  "display": "#EEB6CF"
+ },
+ {
+  "code": "M31",
+  "name": "Lavender",
+  "hex": "#B7A7CC",
+  "display": "#CAB7D9"
+ },
+ {
+  "code": "M32",
+  "name": "Purple",
+  "hex": "#9163AB",
+  "display": "#A06DB6"
+ },
+ {
+  "code": "M33",
+  "name": "Violet",
+  "hex": "#5A288B",
+  "display": "#632C93"
+ },
+ {
+  "code": "M34",
+  "name": "Dark Purple",
+  "hex": "#3C2164",
+  "display": "#422469"
+ },
+ {
+  "code": "M35",
+  "name": "Plum",
+  "hex": "#8A3657",
+  "display": "#973F53"
+ },
+ {
+  "code": "M36",
+  "name": "Maroon",
+  "hex": "#5F2322",
+  "display": "#682623"
+ },
+ {
+  "code": "M37",
+  "name": "Deep Brown",
+  "hex": "#3E2B25",
+  "display": "#432F28"
+ },
+ {
+  "code": "M38",
+  "name": "Dark Brown",
+  "hex": "#553423",
+  "display": "#5F3924"
+ },
+ {
+  "code": "M39",
+  "name": "Brown",
+  "hex": "#8B4E1F",
+  "display": "#9A5420"
+ },
+ {
+  "code": "M40",
+  "name": "Tan",
+  "hex": "#8E6231",
+  "display": "#9F6B33"
+ },
+ {
+  "code": "M41",
+  "name": "Skin Dark",
+  "hex": "#C18153",
+  "display": "#D68D58"
+ },
+ {
+  "code": "M42",
+  "name": "Skin Mid",
+  "hex": "#D3A77A",
+  "display": "#EBB682"
+ },
+ {
+  "code": "M43",
+  "name": "Skin Light",
+  "hex": "#D4B390",
+  "display": "#EBC499"
+ },
+ {
+  "code": "M44",
+  "name": "Skin Pale",
+  "hex": "#DCC4A8",
+  "display": "#F4D6B3"
+ }
+]

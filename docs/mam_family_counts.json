@@ -1,0 +1,120 @@
+{
+ "img": "family",
+ "crop": {
+  "x": 13,
+  "y": 85,
+  "width": 510,
+  "height": 510
+ },
+ "params": {
+  "brightness": 0.9,
+  "contrast": 1.4,
+  "saturation": 1,
+  "beautyIndex": 2,
+  "faceCorrect": true,
+  "maxColors": 20,
+  "palette": "full"
+ },
+ "bricks": [
+  {
+   "hex": "#262223",
+   "count": 1259,
+   "order": 1
+  },
+  {
+   "hex": "#545655",
+   "count": 61,
+   "order": 3
+  },
+  {
+   "hex": "#89898b",
+   "count": 70,
+   "order": 4
+  },
+  {
+   "hex": "#ddd5be",
+   "count": 368,
+   "order": 5
+  },
+  {
+   "hex": "#75754f",
+   "count": 56,
+   "order": 6
+  },
+  {
+   "hex": "#756645",
+   "count": 52,
+   "order": 7
+  },
+  {
+   "hex": "#21233c",
+   "count": 78,
+   "order": 9
+  },
+  {
+   "hex": "#85a7d4",
+   "count": 68,
+   "order": 14
+  },
+  {
+   "hex": "#b7cec6",
+   "count": 222,
+   "order": 15
+  },
+  {
+   "hex": "#5c7162",
+   "count": 42,
+   "order": 17
+  },
+  {
+   "hex": "#34443a",
+   "count": 52,
+   "order": 26
+  },
+  {
+   "hex": "#5f2322",
+   "count": 63,
+   "order": 36
+  },
+  {
+   "hex": "#3e2b25",
+   "count": 77,
+   "order": 37
+  },
+  {
+   "hex": "#553423",
+   "count": 77,
+   "order": 38
+  },
+  {
+   "hex": "#8b4e1f",
+   "count": 54,
+   "order": 39
+  },
+  {
+   "hex": "#8e6231",
+   "count": 93,
+   "order": 40
+  },
+  {
+   "hex": "#c18153",
+   "count": 213,
+   "order": 41
+  },
+  {
+   "hex": "#d3a77a",
+   "count": 293,
+   "order": 42
+  },
+  {
+   "hex": "#d4b390",
+   "count": 211,
+   "order": 43
+  },
+  {
+   "hex": "#dcc4a8",
+   "count": 191,
+   "order": 44
+  }
+ ]
+}
