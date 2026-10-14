@@ -93,6 +93,7 @@ h1, h2 { color: var(--heading); margin: 0; }
 .tile.selected { border-color: var(--primary); background: #fff; }
 .tile-art { display: flex; align-items: center; justify-content: center; background: linear-gradient(#fff, #f3f3f3); border-radius: 6px; margin-bottom: 8px; }
 .tile .plates { display: grid; gap: 3px; }
+.tile-mosaic { border: 3px solid #1b1b1b; border-radius: 3px; }
 .tile .plates span { background: repeating-conic-gradient(#3a3a3a 0 25%, #2a2a2a 0 50%) 0 0 / 25% 25%; border: 2px solid #111; border-radius: 2px; }
 .tile.selected .plates span { background: repeating-conic-gradient(#d3a77a 0 25%, #c18153 0 50%) 0 0 / 25% 25%; }
 .tile-label { display: flex; flex-direction: column; gap: 2px; }

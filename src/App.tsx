@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import type { Area } from 'react-easy-crop'
 import BricksStep from './components/BricksStep'
+import { renderMosaic } from './components/MosaicCanvas'
 import CropStep from './components/CropStep'
 import Header from './components/Header'
 import Hero from './components/Hero'
@@ -126,6 +127,17 @@ export default function App() {
     const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([txt], { type: 'text/csv' })); a.download = `pieces-and-bricks-${W}x${H}.csv`; a.click()
   }
 
+  // High-res mosaic image: 40 px per brick with the stud look, baseplate boundaries in yellow, PNG download.
+  const exportPng = () => {
+    const px = 40
+    const c = renderMosaic(grid, W, H, px)
+    const ctx = c.getContext('2d')!
+    ctx.strokeStyle = 'rgba(255,220,0,.9)'; ctx.lineWidth = 3
+    for (let x = 1; x < cols; x++) { ctx.beginPath(); ctx.moveTo(x * PLATE * px, 0); ctx.lineTo(x * PLATE * px, H * px); ctx.stroke() }
+    for (let y = 1; y < rows; y++) { ctx.beginPath(); ctx.moveTo(0, y * PLATE * px); ctx.lineTo(W * px, y * PLATE * px); ctx.stroke() }
+    const a = document.createElement('a'); a.href = c.toDataURL('image/png'); a.download = `pieces-and-bricks-${W}x${H}.png`; a.click()
+  }
+
   return (
     <div className="site">
       <div className="no-print">
@@ -134,8 +146,8 @@ export default function App() {
         <Hero grid={grid} w={W} h={H} caption={layout.name} onStart={() => go('plates')} />
 
         <div className="maker-wrap" ref={makerRef}>
-          <div className="maker-head"><b>{layout.name}</b> <span>{W}×{H} studs · {W * H} pcs</span>{step !== 'plates' && <button className="pill ghost sm" onClick={() => go('plates')}>Select other size</button>}</div>
-          {step === 'plates' && <PlatePicker layout={layout} onChange={setLayout} onUpload={() => fileRef.current?.click()} onNext={() => go('crop')} />}
+          <div className="maker-head"><b>{layout.name}</b> <span>{layout.note} · {W * H} pcs</span>{step !== 'plates' && <button className="pill ghost sm" onClick={() => go('plates')}>Select other size</button>}</div>
+          {step === 'plates' && <PlatePicker layout={layout} onChange={setLayout} onUpload={() => fileRef.current?.click()} onNext={() => go('crop')} img={img} faces={faces} adj={effAdj} />}
           {step === 'crop' && (
             <CropStep src={src} img={img} faces={faces} aspect={aspect} candidates={candidates} initialCrop={initialCrop} onPickCandidate={pickCandidate}
               crop={crop} zoom={zoom} onCrop={setCrop} onZoom={setZoom} onArea={setArea} adj={effAdj} onPrev={() => go('plates')} onNext={() => go('studio')} />
@@ -150,11 +162,11 @@ export default function App() {
           )}
           {step === 'bricks' && (
             <BricksStep grid={grid} W={W} H={H} plate={PLATE} counts={counts} plates={plates} replaceFrom={replaceFrom} onReplaceFrom={setReplaceFrom} onReplace={replaceAll}
-              onPrev={() => go('studio')} onPrint={() => window.print()} onCsv={exportCsv} />
+              onPrev={() => go('studio')} onPrint={() => window.print()} onCsv={exportCsv} onPng={exportPng} />
           )}
         </div>
 
-        <footer className="site-footer">PIECES &amp; BRICKS · proof of concept · 40 official brick colours · 24×24 baseplates</footer>
+        <footer className="site-footer">PIECES &amp; BRICKS · proof of concept · 40 official brick colours · 8 mm bricks · 24×24 baseplates (19.2 cm)</footer>
       </div>
 
       {/* Print-only assembly instructions */}

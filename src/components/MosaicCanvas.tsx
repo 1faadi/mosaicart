@@ -5,12 +5,9 @@ import stud from '../data/mam-stud.json'
 // Mosaic Art Maker's stud look, measured from their render: pixel = a * brickHex + b per tile pixel (10x10 per brick).
 const S = stud.size, SA = stud.a, SB = stud.b
 
-// Canvas render of a brick grid with stud look. Used for previews/thumbnails (fast, non-interactive).
-export default function MosaicCanvas({ grid, w, h, px = 8, frame = false, className = '' }: { grid: number[]; w: number; h: number; px?: number; frame?: boolean; className?: string }) {
-  const ref = useRef<HTMLCanvasElement>(null)
-  useEffect(() => {
-    const c = ref.current
-    if (!c || grid.length !== w * h) return
+// Draw a brick grid into a canvas (new one when none given). Stud look: Mosaic Art Maker's measured tile for their
+// palette, a simple ring highlight for ours.
+export function renderMosaic(grid: number[], w: number, h: number, px: number, frame = false, c = document.createElement('canvas')): HTMLCanvasElement {
     const pad = frame ? Math.round(px * 1.5) : 0
     c.width = w * px + pad * 2; c.height = h * px + pad * 2
     const ctx = c.getContext('2d')!
@@ -31,7 +28,7 @@ export default function MosaicCanvas({ grid, w, h, px = 8, frame = false, classN
       off.getContext('2d')!.putImageData(id, 0, 0)
       ctx.imageSmoothingQuality = 'high'
       ctx.drawImage(off, pad, pad, w * px, h * px)
-      return
+      return c
     }
     for (let i = 0; i < grid.length; i++) {
       const x = pad + (i % w) * px, y = pad + ((i / w) | 0) * px
@@ -44,6 +41,14 @@ export default function MosaicCanvas({ grid, w, h, px = 8, frame = false, classN
         ctx.strokeStyle = 'rgba(255,255,255,.22)'; ctx.stroke()
       }
     }
+    return c
+}
+
+// Canvas render of a brick grid with stud look. Used for previews/thumbnails (fast, non-interactive).
+export default function MosaicCanvas({ grid, w, h, px = 8, frame = false, className = '' }: { grid: number[]; w: number; h: number; px?: number; frame?: boolean; className?: string }) {
+  const ref = useRef<HTMLCanvasElement>(null)
+  useEffect(() => {
+    if (ref.current && grid.length === w * h) renderMosaic(grid, w, h, px, frame, ref.current)
   }, [grid, w, h, px, frame])
   return <canvas ref={ref} className={className} />
 }

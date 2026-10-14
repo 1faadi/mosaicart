@@ -6,7 +6,7 @@ type Plate = { label: string; cells: number[] }
 type Props = {
   grid: number[]; W: number; H: number; plate: number; counts: Map<number, number>; plates: Plate[]
   replaceFrom: number | null; onReplaceFrom: (i: number | null) => void; onReplace: (from: number, to: number) => void
-  onPrev: () => void; onPrint: () => void; onCsv: () => void
+  onPrev: () => void; onPrint: () => void; onCsv: () => void; onPng: () => void
 }
 
 export default function BricksStep(p: Props) {
@@ -26,6 +26,7 @@ export default function BricksStep(p: Props) {
           <div className="row">
             <button className="pill primary" onClick={p.onPrint}>Print assembly instructions</button>
             <button className="pill ghost" onClick={p.onCsv}>Download CSV</button>
+            <button className="pill ghost" onClick={p.onPng}>Download PNG</button>
           </div>
           <p className="fine">Editor, counts, per-plate list, CSV and the printed guide all come from the same brick matrix.</p>
         </div>
